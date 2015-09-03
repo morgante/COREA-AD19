@@ -22,7 +22,7 @@ class App extends Component {
 
     return (
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> | <Link to="/life">Life</Link>
         { pathname }
         <hr />
         <hr />

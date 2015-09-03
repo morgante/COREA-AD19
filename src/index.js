@@ -7,6 +7,7 @@ import configureStore from './store/configureStore';
 import App from './components/App';
 import HomePage from './components/pages/HomePage';
 import BlogPage from './components/pages/BlogPage';
+import LifePage from './components/pages/LifePage';
 
 const history = new BrowserHistory();
 const store = configureStore();
@@ -19,6 +20,7 @@ React.render(
 	        <Route path="/" component={HomePage} />
 	        <Route path="/blog" component={BlogPage} />
 	        <Route path="/home" component={HomePage} />
+          <Route path="/life" component={LifePage} />
         </Route>
       </Router>
     }
