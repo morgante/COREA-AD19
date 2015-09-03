@@ -31,28 +31,37 @@ function evaluate(grid) {
 	var newGrid = grid;
 	_.each(grid, function(cells, row) {
 		_.each(cells, function(isAlive, column) {
-			const left = (column > 0) ? column - 1 : false;
-			const right = (column < cells.length - 1) ? column + 1 : false;
-			const top = (row > 0) ? row - 1 : false
-			const bottom = (row < (grid.length - 1)) ? row + 1 : false;
-			const neighbors = [
-				[top, left],
-				[top, column],
-				[top, right],
-				[row, left],
-				[row, right],
-				[bottom, left],
-				[bottom, column],
-				[bottom, right]
-			];
-			const liveCount = _.map(neighbors, function(location) {
-				if (location[0] !== false && location[1] !== false) {
-					return grid[location[0]][location[1]];
-				} else {
-					return false;
+			var neighbors = [];
+			const hasTop = row > 0;
+			const hasLeft = column > 0;
+			const hasRight = column < cells.length - 1;
+			const hasBottom = row < grid.length - 1;
+			const reverse = _.partial(toggle, newGrid, row, column);
+			if (hasTop) {
+				neighbors.push(grid[row - 1][column]);
+				if (hasLeft) {
+					neighbors.push(grid[row - 1][column - 1]);
 				}
-			}).length;
-			const reverse = _.partial(toggle, grid, row, column);
+				if (hasRight) {
+					neighbors.push(grid[row - 1][column + 1]);
+				}
+			}
+			if (hasLeft) {
+				neighbors.push(grid[row][column - 1]);
+			}
+			if (hasRight) {
+				neighbors.push(grid[row][column + 1]);
+			}
+			if (hasBottom) {
+				neighbors.push(grid[row + 1][column]);
+				if (hasLeft) {
+					neighbors.push(grid[row + 1][column - 1]);
+				}
+				if (hasRight) {
+					neighbors.push(grid[row + 1][column + 1]);
+				}
+			}
+			const liveCount = _.filter(neighbors).length;
 			if (isAlive && liveCount < 2) {
 				newGrid = reverse();
 			}
