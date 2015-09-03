@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as CounterActions from '../../actions/counter';
 
 class CounterPage extends Component {
   constructor(props) {
@@ -10,10 +9,8 @@ class CounterPage extends Component {
   render() {
     return (
       <div>
-        <p>You are counting the counts.</p>
-        <p>Counted {this.props.counter} times.</p>
-        <button onClick={this.props.increment}>+</button>
-        <button onClick={this.props.decrement}>-</button>
+        <p>You are on the blog page.</p>
+        <p>{this.props.blog}</p>
       </div>
     );
   }
@@ -24,11 +21,10 @@ CounterPage.propTypes = {
 
 function mapStateToProps(state, ownProps) {
   return {
-    counter: state.counter
+    blog: state.blog
   };
 }
 
 export default connect(
-  mapStateToProps,
-  CounterActions
+  mapStateToProps
 )(CounterPage);

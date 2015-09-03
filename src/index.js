@@ -6,7 +6,7 @@ import { Router, Route } from 'react-router';
 import configureStore from './store/configureStore';
 import App from './components/App';
 import HomePage from './components/pages/HomePage';
-import CounterPage from './components/pages/CounterPage';
+import BlogPage from './components/pages/BlogPage';
 
 const history = new BrowserHistory();
 const store = configureStore();
@@ -17,7 +17,7 @@ React.render(
       <Router history={history}>
         <Route component={App}>
 	        <Route path="/" component={HomePage} />
-	        <Route path="/counter" component={CounterPage} />
+	        <Route path="/blog" component={BlogPage} />
 	        <Route path="/home" component={HomePage} />
         </Route>
       </Router>

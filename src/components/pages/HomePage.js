@@ -11,7 +11,7 @@ class HomePage extends Component {
     return (
       <div>
         <p>You are home!</p>
-        <Link to="/counter">Counter</Link>
+        <Link to="/blog">Blog</Link>
       </div>
     );
   }
