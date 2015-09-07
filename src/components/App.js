@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 var DocumentTitle = require('react-document-title');
+var styles = require("../../styles/main.scss");
 
 class App extends Component {
   constructor(props) {
@@ -24,8 +25,10 @@ class App extends Component {
     return (
       <DocumentTitle title="Communication & Technology">
         <div>
-          <Link to="/">Home</Link>
-          { pathname }
+          <div className={styles.header}>
+            <Link to="/">Home</Link>
+            { pathname }
+          </div>
           <hr />
           <hr />
           {children}
