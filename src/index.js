@@ -17,7 +17,7 @@ React.render(
       <Router history={history}>
         <Route component={App}>
 	        <Route path="/" component={HomePage} />
-	        <Route path="/blog" component={BlogPage} />
+	        <Route path="/blog(/:page)" component={BlogPage} />
 	        <Route path="/home" component={HomePage} />
         </Route>
       </Router>

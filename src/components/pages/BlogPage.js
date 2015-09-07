@@ -1,30 +1,48 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
+var DocumentTitle = require('react-document-title');
 
-class CounterPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+import BlogIndex from "../blog/BlogIndex";
 
-  render() {
-    return (
-      <div>
-        <p>You are on the blog page.</p>
-        <p>{this.props.blog}</p>
-      </div>
-    );
-  }
+const posts = {
+	"homework1": require("../blog/HomeworkOne")
+};
+
+class BlogPage extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		console.log("blog page", this.props.params);
+		const page = this.props.params.page;
+		var Post;
+		if (page !== undefined) {
+			Post = posts[page];
+		} else {
+			Post = BlogIndex;
+		}
+		return (
+			<DocumentTitle title="Blog">
+				<div>
+					<h3><Link to="/blog">Blog</Link></h3>
+					<Post posts={posts} />
+				</div>
+			</DocumentTitle>
+		);
+	}
 }
 
-CounterPage.propTypes = {
+BlogPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-  return {
-    blog: state.blog
-  };
+	return {
+		blog: state.blog
+	};
 }
 
 export default connect(
-  mapStateToProps
-)(CounterPage);
+	mapStateToProps
+)(BlogPage);
