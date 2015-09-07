@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 var DocumentTitle = require('react-document-title');
 var styles = require("../../styles/main.scss");
 
+import {SiteHeader} from './SiteHeader';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,12 +27,7 @@ class App extends Component {
     return (
       <DocumentTitle title="Communication & Technology">
         <div>
-          <div className={styles.header}>
-            <Link to="/">Home</Link>
-            { pathname }
-          </div>
-          <hr />
-          <hr />
+          <SiteHeader />
           {children}
         </div>
       </DocumentTitle>

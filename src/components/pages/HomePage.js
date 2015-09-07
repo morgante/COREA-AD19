@@ -10,10 +10,12 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div>
-        <p>You are home!</p>
-        <Link to="/blog">Blog</Link>
-        <Button bsStyle="danger">Do not click me!</Button>
+      <div className="container page">
+        <h3>Welcome to Communication and Technology</h3>
+        <p>Please choose a page:</p>
+        <ul>
+          <li><Link to="/blog/homework1">Homework 1</Link></li>
+        </ul>
       </div>
     );
   }

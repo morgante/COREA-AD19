@@ -29,8 +29,7 @@ class HomeworkOne extends Component {
 		if (post.edit) {
 			contents = (
 				<div>
-					<h3>{title} <Badge>{wordLength} words</Badge></h3>
-					<p>This is the first post, yay!</p>
+					<h2>{title} <Badge>{wordLength} words</Badge></h2>
 					<DisplayMarkdown content={text} />
 					<TextEditor content={text} onChange={this.handleChange.bind(this)} />
 					<Button bsStyle="success" onClick={this.toggleEditing.bind(this)}>Done</Button>
@@ -39,8 +38,7 @@ class HomeworkOne extends Component {
 		} else {
 			contents = (
 				<div>
-					<h3>{title}</h3>
-					<p>This is the first post, yay!</p>
+					<h2>{title}</h2>
 					<DisplayMarkdown content={text} />
 					<Button onClick={this.toggleEditing.bind(this)}>Edit</Button>
 				</div>

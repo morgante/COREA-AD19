@@ -12,15 +12,20 @@ class BlogIndex extends Component {
 		const posts = _.map(this.props.posts, function(Post, key) {
 			const url = "/blog/" + key;
 			return (
-				<Link to={url}>
-					<Post mode="title" />
-				</Link>
+				<li>
+					<Link to={url}>
+						<Post mode="title" />
+					</Link>
+				</li>
 			);
 		});
 		return (
 			<div>
-				<p>This is the blog index.</p>
-				<div>{posts}</div>
+				<h3>Blog Index</h3>
+				<p>Please choose a post:</p>
+				<ul>
+					{posts}
+				</ul>
 			</div>
 		);
 	}

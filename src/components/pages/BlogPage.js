@@ -25,8 +25,7 @@ class BlogPage extends Component {
 		}
 		return (
 			<DocumentTitle title="Blog">
-				<div>
-					<h3><Link to="/blog">Blog</Link></h3>
+				<div className="blog container page">
 					<Post posts={posts} />
 				</div>
 			</DocumentTitle>

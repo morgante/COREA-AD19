@@ -3,7 +3,7 @@ var _ = require("lodash");
 var defaultState = {
 	posts: {
 		homework1: {
-			title: "Homework Numero Two",
+			title: "Homework One: The Meaning of Communication & Technology",
 			text: require("../../text/homework1.md"),
 			edit: false
 		}

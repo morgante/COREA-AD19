@@ -1,7 +1,20 @@
-$icon-font-path: "~/bootstrap-sass/assets/fonts/";
+$icon-font-path: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/";
 
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 :local(.header) {
 	background: red;
+}
+
+.masthead {
+	background: #428bca;
+
+	a, a:hover, a:active {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.brand a:hover .icon {
+		color: #333;
+	}
 }
