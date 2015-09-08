@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 class HomePage extends Component {
   constructor(props) {
@@ -9,9 +10,12 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div>
-        <p>You are home!</p>
-        <Link to="/blog">Blog</Link>
+      <div className="container page">
+        <h3>Welcome to Communication and Technology</h3>
+        <p>Please choose a page:</p>
+        <ul>
+          <li><Link to="/blog/homework1">Homework 1</Link></li>
+        </ul>
       </div>
     );
   }

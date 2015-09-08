@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+var DocumentTitle = require('react-document-title');
+var styles = require("../../styles/main.scss");
+
+import {SiteHeader} from './SiteHeader';
 
 class App extends Component {
   constructor(props) {
@@ -21,13 +25,12 @@ class App extends Component {
     const value = pathname.substring(1);
 
     return (
-      <div>
-        <Link to="/">Home</Link> | <Link to="/life">Life</Link>
-        { pathname }
-        <hr />
-        <hr />
-        {children}
-      </div>
+      <DocumentTitle title="Communication & Technology">
+        <div>
+          <SiteHeader />
+          {children}
+        </div>
+      </DocumentTitle>
     );
   }
 }
