@@ -16,6 +16,7 @@ export class SiteHeader extends Component {
 							<span className="icon"><Glyphicon glyph="home" /></span> Communication & Technology
 						</Link>
 					</h4>
+					<h5 className="author">by <a href="http://morgante.net">Morgante Pell</a></h5>
 				</div>
 			</div>
 		);
