@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-
+import {doGameStep} from '../../actions/life';
 import GameOfLife from '../life';
 
 class LifePage extends Component {
@@ -9,10 +9,11 @@ class LifePage extends Component {
   }
 
   render() {
+    const evaluator = this.props.dispatch.bind(this, doGameStep());
     return (
       <div>
         <p>This is the game of life.</p>
-        <GameOfLife grid={this.props.grid} />
+        <GameOfLife grid={this.props.grid} evaluator={evaluator} />
       </div>
     );
   }

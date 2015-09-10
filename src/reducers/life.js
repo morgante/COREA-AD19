@@ -8,5 +8,11 @@ function makeGrid() {
 }
 
 export default function life(state = makeGrid(), action) {
-	return state;
+	switch (action.type) {
+		case "DO_GAME_OF_LIFE_STEP":
+			console.log("action life", state);
+			return state;
+		default:
+			return state;
+	}
 }

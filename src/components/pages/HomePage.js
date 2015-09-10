@@ -15,6 +15,7 @@ class HomePage extends Component {
         <p>Please choose a page:</p>
         <ul>
           <li><Link to="/blog/homework1">Homework 1</Link></li>
+          <li><Link to="/life">Game of Life</Link></li>
         </ul>
       </div>
     );

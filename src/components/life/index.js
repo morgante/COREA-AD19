@@ -85,15 +85,7 @@ export default class GameOfLife extends Component {
 	}
 
 	componentDidMount() {
-		this.evaluate();
-		setInterval(this.evaluate.bind(this), 500);
-	}
-
-	evaluate() {
-		console.log("evaluate now");
-		this.setState({
-			grid: evaluate(this.state.grid)
-		});
+		setInterval(this.props.evaluator, 500);
 	}
 
 	render() {
