@@ -6,7 +6,8 @@ var DocumentTitle = require('react-document-title');
 import BlogIndex from "../blog/BlogIndex";
 
 const posts = {
-	"homework1": require("../blog/HomeworkOne")
+	"homework1": require("../blog/HomeworkOne"),
+	"homework2": require("../blog/HomeworkTwo")
 };
 
 class BlogPage extends Component {

@@ -6,6 +6,11 @@ var defaultState = {
 			title: "Homework One: The Meaning of Communication & Technology",
 			text: require("../../text/homework1.md"),
 			edit: false
+		},
+		homework2: {
+			title: "Homework Two: An Exercise in Technical Asceticism",
+			text: require("../../text/homework2.md"),
+			edit: false
 		}
 	}
 };
