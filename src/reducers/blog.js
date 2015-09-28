@@ -11,6 +11,11 @@ var defaultState = {
 			title: "Homework Two: An Exercise in Technical Asceticism",
 			text: require("../../text/homework2.md"),
 			edit: false
+		},
+		emoticons: {
+			title: "Conceptual Emoticons",
+			text: require("../../text/emoticons.md"),
+			edit: false
 		}
 	}
 };

@@ -7,8 +7,16 @@ export class DisplayMarkdown extends Component {
 	}
 
 	createHtml() {
+		var html = markdown.toHTML(this.props.content);
+
+		html = html.replace(/src=\"(\w+).png\"/gi, (match, src) => {
+			var file = require("../../../images/" + src + ".png");
+			return 'src="' + file + '"';
+		});
+
+
 		return {
-			__html: markdown.toHTML(this.props.content)
+			__html: html
 		};
 	}
 
