@@ -7,7 +7,8 @@ import BlogIndex from "../blog/BlogIndex";
 
 const posts = {
 	"homework1": require("../blog/HomeworkOne"),
-	"homework2": require("../blog/HomeworkTwo")
+	"homework2": require("../blog/HomeworkTwo"),
+	"emoticons": require("../blog/Emoticons")
 };
 
 class BlogPage extends Component {
