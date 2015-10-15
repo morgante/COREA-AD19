@@ -17,7 +17,7 @@ class HomePage extends Component {
           <li><Link to="/blog/homework1">Homework 1</Link></li>
           <li><Link to="/blog/homework2">Homework 2</Link></li>
           <li><Link to="/blog/emoticons">Emoticons</Link></li>
-          <li><Link to="/blog/paper1">Paper 1 (Draft)</Link></li>
+          <li><Link to="/blog/paper1">Paper 1 (Final)</Link></li>
         </ul>
       </div>
     );
