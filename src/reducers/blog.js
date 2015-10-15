@@ -16,6 +16,11 @@ var defaultState = {
 			title: "Conceptual Emoticons",
 			text: require("../../text/emoticons.md"),
 			edit: false
+		},
+		paper1: {
+			title: "Paper One",
+			text: require("../../text/paper1.md"),
+			edit: false
 		}
 	}
 };
