@@ -18,3 +18,4 @@ The Pony Express fully deserves its place in the history books as one of the mos
 * Bradley, Glenn Danford (1913). The story of the Pony Express. A. C. McClurg & Co. 
 * Godfrey, Anthony (1994). "Pony Express National Historic Trail Historic Resource Study". National Park Service.
 * “The First Transcontinental Telegraph System Was Completed October 24, 1861". AmericasLibrary.gov: America's Story from America's Library. Library of Congress.
+* *Pony Express*. California National Productions. 1959. Television.
