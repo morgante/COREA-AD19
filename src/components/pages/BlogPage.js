@@ -10,7 +10,8 @@ const posts = {
 	"homework2": require("../blog/HomeworkTwo"),
 	"emoticons": require("../blog/Emoticons"),
 	"paper1": require("../blog/PaperOne"),
-	"rewire": require("../blog/RewireVideo")
+	"rewire": require("../blog/RewireVideo"),
+	"paper2": require("../blog/PaperTwo")
 };
 
 class BlogPage extends Component {

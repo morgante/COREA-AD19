@@ -21,6 +21,11 @@ var defaultState = {
 			title: "Paper One",
 			text: require("../../text/paper1.md"),
 			edit: false
+		},
+		paper2: {
+			title: "Paper Two",
+			text: require("../../text/paper2.md"),
+			edit: false
 		}
 	}
 };
