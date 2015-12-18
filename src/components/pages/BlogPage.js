@@ -11,7 +11,9 @@ const posts = {
 	"emoticons": require("../blog/Emoticons"),
 	"paper1": require("../blog/PaperOne"),
 	"rewire": require("../blog/RewireVideo"),
-	"paper2": require("../blog/PaperTwo")
+	"paper2": require("../blog/PaperTwo"),
+	"semaphore": require("../blog/Semaphore"),
+	"stackexchange": require("../blog/StackExchange")
 };
 
 class BlogPage extends Component {

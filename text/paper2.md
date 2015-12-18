@@ -23,7 +23,6 @@ In a surprising move, the Supreme Court has ruled that the sale of the US Postal
 
 Facebook stock is up 12% in after-hours trading following the Supreme Court’s announcement.
 
-
 ### Gizmodo
 
 August 3, 2020
