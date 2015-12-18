@@ -26,6 +26,16 @@ var defaultState = {
 			title: "Paper Two",
 			text: require("../../text/paper2.md"),
 			edit: false
+		},
+		semaphore: {
+			title: "Semaphore",
+			text: require("../../text/semaphore.md"),
+			edit: false
+		},
+		stackexchange: {
+			title: "StackExchange",
+			text: require("../../text/stackexchange.md"),
+			edit: false
 		}
 	}
 };
